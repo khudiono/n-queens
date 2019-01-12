@@ -12,7 +12,6 @@ describe('Board', function() {
       var conflictDetected = board['hasAny' + capitalize(conflictType) + 'Conflicts']();
       var conflictExpected = _(expectedConflicts).contains(conflictType);
       var message = conflictExpected ? 'should' : 'should not';
-
       it(message + ' find a ' + conflictType + ' conflict', function() {
         expect(conflictDetected).to.be.equal(conflictExpected);
       });
@@ -35,6 +34,7 @@ describe('Board', function() {
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ]);
+
   });
 
   describe('Board with col conflicts', function() {
